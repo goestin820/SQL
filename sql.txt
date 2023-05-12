@@ -1,7 +1,0 @@
-SELECT substring(`seat_num`,1,3)  as '班級',
-	   count(*)	as '人數'
-FROM `students` 
-where `major`='國際貿易科' AND
-	  substring(`national_id`,2,1)=1
-group by substring(`seat_num`,1,3)
-ORDER by count(*) desc
