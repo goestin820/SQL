@@ -15,7 +15,7 @@ $pdo = new PDO($dsn, 'root', '');
         padding: 5px 8px;
     }
 
-    a.btn{
+    a.btn {
         display: inline-block;
         border: 1px solid lightgreen;
         padding: 5px 15px;
@@ -26,17 +26,17 @@ $pdo = new PDO($dsn, 'root', '');
         color: white;
         text-decoration: none;
         position: relative;
-        top:0px;
+        top: 0px;
         transition: all 0.5s;
     }
-   
-    a.btn:hover{
+
+    a.btn:hover {
         text-decoration: underline;
         background-color: skyblue;
         position: relative;
         top: -5px;
         transform: scale(1.1);
-        transition:all 0.5s;
+        transition: all 0.5s;
     }
 </style>
 
@@ -61,25 +61,23 @@ $pdo = new PDO($dsn, 'root', '');
 
     <?php
     $sql = "select * from students";
-    $rows123 = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($rows123 as $row1) {
+    $rows = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($rows as $row) {
     ?>
         <tr>
-            <td><?= $row1['id']; ?></td>
-            <td><?= $row1['uni_id']; ?></td>
-            <td><?= $row1['seat_num']; ?></td>
-            <td><?= $row1['name']; ?></td>
-            <td><?= $row1['birthday']; ?></td>
-            <td><?= $row1['national_id']; ?></td>
-            <td><?= $row1['address']; ?></td>
-            <td><?= $row1['parent']; ?></td>
-            <td><?= $row1['telphone']; ?></td>
-            <td><?= $row1['major']; ?></td>
-            <td><?= $row1['secondary']; ?></td>
-            <td>編輯</td>
-            <!-- <td><a href="#" onclick="confirm('確定刪除嗎？')">刪除</a></td> -->
-            <td><a href="del.php?id=<?= $row1['id']; ?>" onclick="confirm('確定刪除嗎？')">刪除</a>
-            </td>
+            <td><?= $row['id']; ?></td>
+            <td><?= $row['uni_id']; ?></td>
+            <td><?= $row['seat_num']; ?></td>
+            <td><?= $row['name']; ?></td>
+            <td><?= $row['birthday']; ?></td>
+            <td><?= $row['national_id']; ?></td>
+            <td><?= $row['address']; ?></td>
+            <td><?= $row['parent']; ?></td>
+            <td><?= $row['telphone']; ?></td>
+            <td><?= $row['major']; ?></td>
+            <td><?= $row['secondary']; ?></td>
+            <td><a href='edit_form.php?id=<?= $row['id']; ?>'>編輯</a></td>
+            <td><a href='del.php?id=<?= $row['id']; ?>'>刪除</a></td>
         </tr>
     <?php
     }
