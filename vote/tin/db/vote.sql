@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2023-05-15 10:14:29
+-- 產生時間： 2023-05-19 08:23:48
 -- 伺服器版本： 10.4.27-MariaDB
 -- PHP 版本： 8.2.0
 
@@ -66,6 +66,20 @@ CREATE TABLE `options` (
   `updated_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- 傾印資料表的資料 `options`
+--
+
+INSERT INTO `options` (`id`, `description`, `subject_id`, `total`, `created_time`, `updated_time`) VALUES
+(8, '20分鐘', 2, 0, '2023-05-15 08:19:27', '2023-05-19 06:16:31'),
+(18, '2分鐘', 2, 0, '2023-05-19 06:16:31', '2023-05-19 06:16:31'),
+(19, '10000秒', 2, 0, '2023-05-19 06:16:31', '2023-05-19 06:16:31'),
+(20, '123233132131', 2, 0, '2023-05-19 06:18:06', '2023-05-19 06:18:06'),
+(21, '3.5萬', 5, 0, '2023-05-19 06:23:38', '2023-05-19 06:23:38'),
+(22, '4萬', 5, 0, '2023-05-19 06:23:38', '2023-05-19 06:23:38'),
+(23, '4.5萬', 5, 0, '2023-05-19 06:23:38', '2023-05-19 06:23:38'),
+(24, '5萬以上', 5, 0, '2023-05-19 06:23:38', '2023-05-19 06:23:38');
+
 -- --------------------------------------------------------
 
 --
@@ -81,6 +95,14 @@ CREATE TABLE `topics` (
   `created_time` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `topics`
+--
+
+INSERT INTO `topics` (`id`, `subject`, `open_time`, `close_time`, `type`, `created_time`, `updated_time`) VALUES
+(2, '每天要花在通勤時間多久?', '2023-05-17 16:19:00', '2023-05-22 16:19:00', 2, '2023-05-15 08:19:27', '2023-05-19 06:18:06'),
+(5, '期望薪水多少?', '2023-05-19 14:23:00', '2023-05-22 14:23:00', 1, '2023-05-19 06:23:38', '2023-05-19 06:23:38');
 
 --
 -- 已傾印資料表的索引
@@ -130,13 +152,13 @@ ALTER TABLE `member`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `options`
 --
 ALTER TABLE `options`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `topics`
 --
 ALTER TABLE `topics`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
