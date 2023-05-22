@@ -39,7 +39,9 @@ if(isset($_POST['opt_id'])){
        $pdo->exec("update `options` set `description`='{$_POST['description'][$idx]}' where `id`='$id'");
        unset($_POST['description'][$idx]);
     }
+
 }
+
 
 //處理新增的選項
 if(!empty($_POST['description'])){
@@ -48,8 +50,7 @@ if(!empty($_POST['description'])){
     }
 }
 
-
-echo "<pre>";
+/* echo "<pre>";
 print_r($options);
 echo "<pre>";
 echo "<pre>";
@@ -58,6 +59,8 @@ echo "<pre>";
 echo "<pre>";
 print_r($_POST['opt_id']);
 echo "<pre>";
+ */
+
+ header("location:../backend.php");
 
 
-header("location:../backend.php");

@@ -23,10 +23,17 @@ main{
     margin:auto;
 }
 
-.topic-list{
+.topic-list,
+.vote-result,
+.vote-list{
     list-style-type: none;
 }
-.list-row{
+.list-row,
+.vote-option,
+.vote-option-title,
+.vote-subject,
+.vote-subject-title
+{
     display:flex;
     width:100%;
 }
@@ -40,7 +47,7 @@ main{
 
 .list-item-title:nth-child(2),
 .list-item:nth-child(2){
-    width:5%;
+    width:10%;
 }
 
 .list-item-title:nth-child(3),
@@ -50,9 +57,81 @@ main{
 
 .list-item-title:nth-child(4),
 .list-item:nth-child(4){
-    width:5%;
+    width:10%;
 }
 .list-item-title:nth-child(5),
 .list-item:nth-child(5){
     width:25%;
+}
+
+.vote-option{
+    align-items:center;
+}
+.vote-item{
+    padding:5px;
+    line-height: 20px;
+}
+.vote-item:nth-child(1){
+    width:10%;
+    text-align:center;
+}
+.vote-item:nth-child(2){
+    width:60%;
+}
+.vote-item:nth-child(3){
+    width:20%;
+    text-align:center;
+}
+.vote-option-title .vote-item{
+    text-align: center;
+}
+
+/*單多選的按鈕美化*/
+.type-info{
+    padding:2px 5px;
+    border-radius:5px;
+    background:lightgreen;
+    color:darkgreen;
+    border:0;
+    font-size:12px;
+}
+.vip-login{
+    padding:2px 5px;
+    border-radius:5px;
+    background:rgb(248, 227, 33);
+    color:rgb(194, 133, 1);
+    border:0;
+    font-size:12px;
+}
+.normal{
+    padding:2px 5px;
+    border-radius:5px;
+    background:lightskyblue;
+    color:blue;
+    border:0;
+    font-size:12px;
+}
+.await{
+    padding:2px 5px;
+    border-radius:5px;
+    background:rgb(248, 227, 33);
+    color:rgb(194, 133, 1);
+    border:0;
+    font-size:12px;
+}
+.in-process{
+    padding:2px 5px;
+    border-radius:5px;
+    background:lightskyblue;
+    color:blue;
+    border:0;
+    font-size:12px;
+}
+.finish{
+    padding:2px 5px;
+    border-radius:5px;
+    background:lightgreen;
+    color:darkgreen;
+    border:0;
+    font-size:12px;
 }
