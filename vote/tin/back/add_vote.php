@@ -32,6 +32,11 @@
             <input type="radio" name="type" value="1">單選&nbsp;&nbsp;
             <input type="radio" name="type" value="2">複選
         </div>
+        <div>
+            <label for="type">是否公開：</label>
+            <input type="radio" name="login" value="0">是&nbsp;&nbsp;
+            <input type="radio" name="login" value="1">否
+        </div>
         <hr>
     <div class="options">        
         <div>
