@@ -17,6 +17,12 @@ $options=$pdo->query("select * from `options` where `subject_id`='{$_GET['id']}'
 ?>
 
 <h2><?=$topic['subject'];?></h2>
+<?php
+    if(!empty($topic['image'])){
+        echo "<img src='./upload/{$topic['image']}' style='width:450px;height:300px'>";
+    }
+?>
+
 <form action="./api/vote.php" method="post">
 <ul>
 <?php
