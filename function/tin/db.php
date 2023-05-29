@@ -9,8 +9,8 @@
 print_r(all('options'));
 echo "</pre>"; */
 
-update('options', ['id' => 8, 'description' => '50萬', 'total' => 200]);
-insert('options', ['description' => '50萬', 'total' => 200]);
+update('options', ['id' => 59, 'description' => '100萬', 'total' => 300]);
+insert('options', ['description' => '50萬', 'subject_id' => '6','total' => 200]);
 
 //insert('options',['description'=>'60萬','subject_id'=>5,'total'=>0]);
 del('options', 8);
