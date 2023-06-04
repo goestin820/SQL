@@ -26,7 +26,7 @@ if ($chk) {
     to("../index.php");
 } else {
     // header("location:../index.php?do=login&error=1");
-    to("../index.php?do=login&error=1")
+    to("../index.php?do=login&error=1");
 }
 
 ?>
