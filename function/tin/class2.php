@@ -47,6 +47,7 @@ echo $animal->age();
 
 class Cat extends Animal{
     private $age;
+    // protected $name;
 
     function __construct($name,$age)
     {
@@ -72,7 +73,7 @@ echo "<BR>";
 $cat=new Cat('小花',30);
 echo "<BR>";
 
-// echo $cat->$name;
+// echo $cat->name;
 // echo "<BR>";
 echo $cat->age();
 echo "<BR>";
