@@ -2,15 +2,15 @@
 
 // $sql = "select count(*) from `members` where `acc`='{$_POST['acc']}' && `pw`='{$_POST['pw']}'";
 // $chk = $pdo->query($sql)->fetchColumn();
-$chk = _count('members', ['acc' => $_POST['acc'], 'pw' => $_POST['pw']]); 
-# $chk=$User->count(['acc'=>$_POST['acc'],'pw'=>$_POST['pw']]);更新為Object導向
+# $chk = _count('members', ['acc' => $_POST['acc'], 'pw' => $_POST['pw']]); 更新為Object導向
+$chk=$User->count(['acc'=>$_POST['acc'],'pw'=>$_POST['pw']]);
 
 if ($chk) {
 
     // $sql = "select `pr` from `members` where `acc`='{$_POST['acc']}' && `pw`='{$_POST['pw']}'";
     // $pr = $pdo->query($sql)->fetchColumn();
-    $pr = find('members',['acc' => $_POST['acc'], 'pw' => $_POST['pw']])['pr'];
-    # pr=$User->find(['acc'=>$_POST['acc'],'pw'=>$_POST['pw']])['pr'];
+    #$pr = find('members',['acc' => $_POST['acc'], 'pw' => $_POST['pw']])['pr'];
+    $pr=$User->find(['acc'=>$_POST['acc'],'pw'=>$_POST['pw']])['pr'];
 
     // if($chk){
     $_SESSION['login'] = $_POST['acc'];

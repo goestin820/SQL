@@ -23,8 +23,7 @@ if ($topic['login'] == 1) {
     }
 }
 
-//更新為function
-$options=$pdo->query("select * from `options` where `subject_id`='{$_GET['id']}'")->fetchAll(PDO::FETCH_ASSOC);
+#$options=$pdo->query("select * from `options` where `subject_id`='{$_GET['id']}'")->fetchAll(PDO::FETCH_ASSOC);更新為function
 ##$options=all('options', ['subject_id'=>$_GET['id']]);更新為物件導向
 ###$options=$Option->all(['subject_id'=>$_GET['id']]);物件導向繼續簡化為下面這一行
 ####$options=$Subject->options();  這段可取消，因$
