@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2023-05-26 08:13:00
+-- 產生時間： 2023-05-26 09:07:13
 -- 伺服器版本： 10.4.27-MariaDB
 -- PHP 版本： 8.2.0
 
@@ -31,8 +31,19 @@ CREATE TABLE `images` (
   `id` int(10) UNSIGNED NOT NULL,
   `img` text NOT NULL,
   `desc` text NOT NULL,
+  `type` text NOT NULL,
+  `size` int(10) UNSIGNED NOT NULL,
   `created_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `images`
+--
+
+INSERT INTO `images` (`id`, `img`, `desc`, `type`, `size`, `created_time`) VALUES
+(1, 'image-01.jpg', '黑暗中的貓', '', 0, '2023-05-26 06:19:02'),
+(2, 'image-02.jpg', '虎爺', '', 0, '2023-05-26 06:21:35'),
+(3, 'image-09.jpg', '金針花', '', 0, '2023-05-26 06:25:56');
 
 --
 -- 已傾印資料表的索引
@@ -52,7 +63,7 @@ ALTER TABLE `images`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
